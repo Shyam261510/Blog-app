@@ -13,7 +13,6 @@ function App() {
         if (userData) dispatch(login(userData));
         else dispatch(logOut());
       })
-
       .finally(() => setLoading(false));
   }, []);
 

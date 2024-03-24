@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { login as authLogin } from "../store/authSlice";
 import { Button, Input } from "./index";
 import { useForm } from "react-hook-form";
@@ -45,6 +45,10 @@ function Login() {
             },
           })}
         />
+        <Input type="password" label="Password" placeholder="Enter your password" {...register("password",{
+          required:true
+        })}/>
+        <Button type="submit" className="w-full">Sign In</Button>
       </form>
     </div>
   );

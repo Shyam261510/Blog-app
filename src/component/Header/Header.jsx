@@ -2,7 +2,7 @@ import { LogoutButton } from "../index";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import authService from "../../appwrite/auth";
+
 function Header() {
   const authStatus = useSelector((state) => state.authReducer.status);
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function Header() {
     {
       name: "Signup",
       slug: "/signup",
-      active: !authService,
+      active: !authStatus,
     },
     {
       name: "All Posts",
